@@ -1,0 +1,258 @@
+*
+/* -- 1. RESET DEFAULTS -- */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -- 2. SELECTORS -- */
+
+/*-- 2.1 Type Selectors -- */
+
+/* Heading */
+
+h1 {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    color: #333;   
+}
+
+/* Aside */
+aside {
+    text-align: center;
+    margin: 20px auto;
+    color: red;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* Form */
+form {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+
+/* Paragraph */
+p {
+    font-size: 14px;
+    color: #666;
+}
+/* Navigation Bar */
+nav {
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;   
+}
+
+/* -- 2.2 Class Selectors -- */
+
+/* Targets the <section> elements with class="form-section" */
+.form-section {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 15;
+    border-radius: 15;
+    width: 80%;
+}
+
+/* -- 2.3 ID Selectors -- */
+
+/* Targets tge meain title (h1) */
+#main-title {
+    color: #004080;
+    margin-bottom: 20;
+}
+
+/* -- 2.4 Multiple Class Selectors -- */
+
+/* Targets "Checklist" (h2) */
+.green.bold {
+    color: green;
+    font-weight: bold;
+}
+
+/* -- 2.5 Attrubute Selectors --- */
+
+/* Targets tezt inputs */
+input[type="text"] {
+    border: 1px solid #ccc;
+    margin: 1px 5px 1px 5px;
+    padding: 5 10 5 10;
+}
+
+/* Targets password input */
+input[type="password"] {
+    border: 1px solid #ccc;
+    margin: 1px 5px 1px 5px;
+    padding: 5 10 5 10;
+}
+
+/* Targets Laurea logo */
+img[src*="Laurea-logo"] {
+    border: 1px solid #004080;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* -- 2.6 Descendant Combinators -- */
+
+/* Targets labels */
+.form-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Targets the list box found below the <h2> element "Checklist */
+section .main-list {
+    list-style-type: square;
+    background-color: #f0f8ff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+/* Targets the list items found below the <h2> element "Checklist */
+.main-list li{
+    margin-left: 20px;
+    color: #444;
+    padding: 5px 0;
+}
+
+/* -- 2.7 Multiple selectors -- */
+
+/* Contains two type selectors abd one class selector */
+h1, h2, .menu {  /* Class ".menu"" targets the navbar or <nav> element */
+    color: #222;
+    font-family: Verdana, sans-serif;
+}
+
+/* -- 2.8 Chaining -- */
+
+/* h1 is the type selector chained with class ".title" together forming "h1.title" */
+h1.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* -- 2.9 Pseudo-classes -- */
+
+/* Laurea logo hover effect */
+.Laurea:hover {
+    opacity: 0.7;
+    transform: scale(1.4);
+    transition: all 0.3s ease;
+}
+
+/* Clicking Laurea logo makes it shrink */
+.Laurea:active {
+    transform: scale(10%);
+}
+/* Visiting the link above the Laurea logo */
+.Visit-Laurea:visited {
+    color: red; /* Visited links change to color red */
+}
+
+/* Styling takes effect when input field is clicked to enter data */
+input:focus {
+    border-color: #004080;
+    outline: none;
+    background-color: #eef6ff;
+}
+
+/* Targets disabled inout fields */
+input.disable {
+    background-color: #eee;
+    color: #999;
+}
+
+/* -- EXTRA SELECTORS -- */
+
+/* -- 2.18 Type selector combined with attribute selector -- */
+
+/* CSS styling targets action button or input named "Send Application". Styling applied without hover. */
+input[type="submit"] {
+    background-color: #084084;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+/* -- 2.11 Type selector combined with attribute selector and pseudo-class -- */
+/* CSS styling targets action button or input names "Send applied only on hover. */
+input[type="submit"]:hover {
+    background-color: lightcoral;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+
+/* -- 3. VISUAL RULES -- */
+
+/* Visual rules applied to body element (visible content on webpage) */
+body {
+    background-color: #fafafa;
+    color: #333;
+    opacity: 0.98;
+    background-image: none !important;
+    background-image: url("https://tse2.mm.bing.net/th/id/OIP.Fzg6mkkUtYWr19PHaaUwcgHaHa?pid=Api");
+}
+
+/*-- 3. THE BOX MODEL -- */
+
+/* -- Targets <textarea> element */
+textarea {
+    width: 100%;
+    min-width: 100px;
+    min-height: 120px;
+    padding: 10px;
+    border: px solid #bbb;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+/* Demonstrates individual margin and padding properties (longhand syntax) instead of shorthand like: 
+margin: 20px; padding: 20px;
+Target: <blockquote> */
+#quote {
+    /* Margin (outer spacing) on all four sides */
+    margin-top: 20px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+    /* Padding (inner spacing) on all four sides */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+/* Visibility example targeting Laurea logo: 
+This is a visibility property used to hide a second Laurea logo located above the footer in the HTLM source code 
+*/
+.hidden-logo {
+    visibility: hidden;
+}
