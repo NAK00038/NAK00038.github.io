@@ -1,0 +1,71 @@
+:root {
+    --bs-primary: #19874c;
+    --bs-primary-rgb: 25, 135, 76;
+}
+
+/* Navbar background */
+.navbar {
+    background-color: #19874c !important;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.3rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #212529;
+    border: 2px solid #fff;
+}
+
+.carousel-indicators .active {
+    background-color: #19874c;
+    border-color: #212529
+}
+
+/* Custom carousel button colors */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #19874c;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-size: 60% 60%;
+    background-position: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5rem;
+    opacity: 1;
+}
+
+.btn-primary {
+  background-color: #19874c;
+  border-color: #19874c;
+}
+
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Hover effect */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* social media icon Linkedin */
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+/* Social media icon Github */
+.fa-github {
+  background: #566067;
+  color: white;
+}
